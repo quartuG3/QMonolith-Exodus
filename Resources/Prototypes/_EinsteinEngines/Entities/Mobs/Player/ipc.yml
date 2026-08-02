@@ -112,6 +112,12 @@
       1: 0.45
       0: 0.00
   - type: BatteryDrinker
+  # Exodus-begin ipc-lightning
+  - type: IpcLightning
+  - type: ActionGrant
+    actions:
+    - ActionIpcLightning
+  # Exodus-end
   - type: EncryptionKeyHolder
     keySlots: 8 # Mono
     examineWhileLocked: false

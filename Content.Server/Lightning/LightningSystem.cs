@@ -57,7 +57,7 @@ public sealed partial class LightningSystem : SharedLightningSystem
         if (proto.TryGetComponent<LightningComponent>(out var lightningComp, EntityManager.ComponentFactory))
             spawnOnHit = lightningComp.SpawnOnHit;
 
-        ShootLightning(user, target, lightningPrototype, triggerLightningEvents);
+        ShootLightning(user, target, spawnOnHit, lightningPrototype, triggerLightningEvents); // Exodus ipc-lightning recursion fix
     }
 
     // Mono - for optimisation purposes

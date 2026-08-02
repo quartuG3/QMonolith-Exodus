@@ -1,0 +1,19 @@
+- type: entity
+  id: ActionIpcLightning
+  name: action-name-ipc-lightning
+  description: action-description-ipc-lightning
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTargetAction
+    useDelay: 30
+    itemIconStyle: NoItem
+    range: 6
+    canTargetSelf: false
+    interactOnMiss: false
+    icon:
+      sprite: Effects/lightning.rsi
+      state: blue_lightning
+    whitelist:
+      components:
+      - Damageable
+    event: !type:IpcLightningActionEvent
